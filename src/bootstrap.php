@@ -18,6 +18,10 @@ $app['auth_secret']      = $config['auth_secret'];
 $app['auth_token']       = $config['auth_token'];
 $app['api_url']          = $config['api_url'];
 
+if ($app['auth_token'] === 'the_auth_token' || $app['auth_secret'] === 'the_auth_secret') {
+    throw new \RuntimeException('You need to change your auth_secret and auth_token values in src/config.ini to those created by the oauth server.');
+}
+
 $app->register(new TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/templates',
     'twig.options' => array('cache' => __DIR__.'/../cache'),
