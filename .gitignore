@@ -2,3 +2,8 @@
 /cache/*
 /vendor/*
 composer.lock
+src/config.ini
+
+.buildpath
+.project
+.settings

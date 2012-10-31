@@ -1,5 +1,16 @@
 {% extends 'layout.html.twig' %}
 
 {% block container_content %}
-    {{ token }}
+
+    <div class="span12">
+        {% if token %}
+            <h2>Your app is authorized against the playfm3 oauth2 API.</h2>
+            <p>Access token: {{ token }}</p>
+            <a class="btn" href="/request">Make an API request to /api/me</a>
+        {% else %}
+                <h2>Your app is not authorized yet.</h2>
+                <a href="{{ url }}" class="btn">Authorize your app</a>
+        {% endif  %}
+    </div>
+    
 {% endblock %}
