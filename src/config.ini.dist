@@ -1,7 +1,7 @@
 [development]
 auth_token = the_auth_token
 auth_secret = the_auth_secret
-redirect_url = http://demo.client/back
-token_url = 'http://demo.api/app_dev.php/oauth/v2/token'
-authorize_url = 'http://demo.api/app_dev.php/oauth/v2/auth?client_id=%s&redirect_uri=%s&response_type=code'
-api_url = 'http://demo.api/app_dev.php/api/me'
+redirect_url = http://oauth.client/back
+token_url = 'http://oauth.server/app_dev.php/oauth/v2/token'
+authorize_url = 'http://oauth.server/app_dev.php/oauth/v2/auth?client_id=%s&redirect_uri=%s&response_type=code'
+api_url = 'http://oauth.server/app_dev.php/api/me'
