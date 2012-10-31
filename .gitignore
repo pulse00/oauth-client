@@ -1,5 +1,4 @@
 *.DS_Store
-/cache/*
 /vendor/*
 composer.lock
 src/config.ini
